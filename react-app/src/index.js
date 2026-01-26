@@ -3,19 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { BrowserRouter } from 'react-router-dom'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <head>
-      <title>Little Lemon</title>
-      <meta name="description" content="Taste the Mediterranean by the sea—fresh ingredients, vibrant flavors, and warm hospitality, inviting you to relax and savor every moment."/>
-      <meta name="og:title" content="Little Lemon"/>
-      <meta name="og:description" content="Taste the Mediterranean by the sea—fresh ingredients, vibrant flavors, and warm hospitality, inviting you to relax and savor every moment."/>
-      <meta property='og:image' content='./assets/images/yellow-lemon.png'></meta>
-    </head>
-
+    
+    <BrowserRouter>
     <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

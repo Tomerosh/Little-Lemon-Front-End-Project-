@@ -1,20 +1,13 @@
 //import foodImg from "../assets/images/food-tray.jpg"
-export default function Main({menuOpen, setMenuOpen}) {
+import { Routes, Route, Link } from "react-router";
+import Homepage from "./HomePage"
+import BookingPage from "./BookingPage"
+
+export default function Main() {
     return <main className="container">
-        <article className="hero-section">
-            <div>
-                <h1>Little Lemon</h1>
-                <h2>Chicago</h2>
-                <p>Taste the Mediterranean by the sea. fresh ingredients, vibrant flavors, and warm hospitality, inviting you to relax and savor every moment.</p>
-                <button className="reserve-button">
-                    <p>Reserve a Table</p>
-                </button>
-                </div>
-            <div id="img"/>
-        </article>
-        <div className="highlights">
-            <h2>Our Specials</h2>
-            <div className="card"></div>
-        </div>
+      <Routes>
+        <Route path="/" element={<Homepage />}></Route>
+        <Route path="/booking" element={<BookingPage/>}></Route>
+      </Routes>
     </main>
 }

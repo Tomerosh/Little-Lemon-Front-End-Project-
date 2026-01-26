@@ -27,7 +27,12 @@
 }
 
 .hamburger{
-   display:none;
+  display:none;
+  transition: .35s;
+}
+.hamburger:hover {
+  opacity: 0.65;
+  transition: 0.35s;
 }
 .menu{
    display:none;
@@ -71,7 +76,6 @@
     transform: rotate(360deg);
   }
 }
-
 .container {
   display: flex;
   flex-direction: column;
@@ -92,6 +96,7 @@ nav #logo {
 }
 .basket {
   scale: .85;
+  cursor: pointer;
 }
 .menu {
   display:flex;
@@ -104,12 +109,22 @@ nav #logo {
   padding: 0;
 }
 
-ul > li {
+ul > li > a{
   font-weight: 700;
   padding: 0;
   text-align: center;
+  color: #495E57;
+  text-decoration-line: none;
 }
 
+ul > li {
+  transition: .35s;
+
+}
+ul > li:hover {
+  opacity: 0.65;
+  transition: 0.35s;
+}
 
 h1 {
   font-family: 'Markazi';
@@ -155,16 +170,35 @@ h2 {
   background-size: cover;
   background-position-y: center;
   background-position-x: center;
+  transition: .35s;
 }
 
-.highlights {
-  height: 60vh;
+#img:hover {
+  scale: 1.1;
+  transition: .35s;
+}
+
+section {
+  flex: 1;
   padding-inline: 15vw;
   padding-block: 40px;
 }
 
+section > h2 {
+  font-family: 'IBM';
+  font-weight: 700;
+}
+
 .highlights h2 {
   color: #000;
+}
+.testimonials {
+  background-color: #495E57;
+}
+
+.testimonials h2 {
+  color: #F4CE14;
+  text-align: center;
 }
 
 .reserve-button {
@@ -176,6 +210,7 @@ h2 {
   font-size: 1.5vw;
   align-self: flex-start;
   font-size: clamp(.75rem, 2.5vw, 26px);
+  cursor: pointer;
 }
 
 .reserve-button > p {
@@ -190,7 +225,7 @@ h2 {
   display:block;
   position: fixed;
   top: 0;
-  left: -50vw;
+  left: -75vw;
   margin-top: 0px;
   background-color: #495E57;
   color: #fff;
@@ -198,26 +233,22 @@ h2 {
   font-size: 1rem;
   font-family: 'IBM';
   font-weight: 400;
-  list-style: none;
-  justify-content: space-evenly;
   padding-inline: 5%;
   padding-block: 2%;
   height: 100vh;
-  transition: 400ms ease;
+  transition: 300ms ease;
 }
 .menu > li{
   text-align: left;
   font-size: 4vw;
   padding-block: 7px;
-  border-bottom-width: 1px;
-  border-bottom-style: dashed;
-  border-bottom-color: #F4CE14;
 }
 
 .hamburger {
   display: block;
   width: 5%;
   padding-right: 5%;
+  cursor: pointer;
 }
 
 
@@ -228,6 +259,10 @@ h2 {
   padding-right: 5%;
   padding-top: 5%;
   padding-bottom: 10%;
+}
+
+.menu > li > a{
+  color: #fff;
 }
 #menu-open {
   left: 0;
