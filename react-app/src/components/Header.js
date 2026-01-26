@@ -1,5 +1,5 @@
 
 export default function Header() {
-    return <header class="container">
+    return <header className="container">
     </header>
 }

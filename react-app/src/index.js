@@ -7,11 +7,14 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <title>Little Lemon</title>
-    <meta name="description" content="Taste the Mediterranean by the sea—fresh ingredients, vibrant flavors, and warm hospitality, inviting you to relax and savor every moment."/>
-    <meta name="og:title" content="Little Lemon"/>
-    <meta name="og:description" content="Taste the Mediterranean by the sea—fresh ingredients, vibrant flavors, and warm hospitality, inviting you to relax and savor every moment."/>
-    <meta property='og:image' content='./assets/images/yellow-lemon.png'></meta>
+    <head>
+      <title>Little Lemon</title>
+      <meta name="description" content="Taste the Mediterranean by the sea—fresh ingredients, vibrant flavors, and warm hospitality, inviting you to relax and savor every moment."/>
+      <meta name="og:title" content="Little Lemon"/>
+      <meta name="og:description" content="Taste the Mediterranean by the sea—fresh ingredients, vibrant flavors, and warm hospitality, inviting you to relax and savor every moment."/>
+      <meta property='og:image' content='./assets/images/yellow-lemon.png'></meta>
+    </head>
+
     <App />
   </React.StrictMode>
 );
