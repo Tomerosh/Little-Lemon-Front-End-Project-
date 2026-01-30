@@ -1,5 +1,6 @@
 import footerLogo from '../assets/images/logo_footer.png'
 import { NavItem, ROUTES } from "./NavItem";
+import './Footer.css';
 
 export default function Footer() {
     return <footer >

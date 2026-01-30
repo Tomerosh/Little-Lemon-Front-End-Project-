@@ -39,10 +39,12 @@ export default function Nav() {
             />
           );
         })}
+        <div className="menuFooter">
         <img
           className="footerLogo"
           src={footerLogo}
         />
+        </div>
       </ul>
       <img className="basket" src={Basket}></img>
     </nav>

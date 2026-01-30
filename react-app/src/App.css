@@ -1,70 +1,9 @@
 
-
-@font-face {
-  font-family: 'Markazi';
-  src: url('assets/fonts/MarkaziText-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-stretch: 75% 125%;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Karla';
-  src: url('assets/fonts/Karla-VariableFont_wght.ttf') format('truetype') ;
-  font-weight: 100 900;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'DM';
-  src: url('assets/fonts/DMSerifText-Regular.ttf') format('truetype');
-  font-weight: 100 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'IBM';
-  src: url('assets/fonts/IBMPlexMono-Light.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-}
-
 main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-footer {
-  display: flex;
-  height: 150px;
-  background-color: #495E57;
-  color: #fff;
-  align-content: center;
-  justify-content: space-evenly;
-  padding: 25px;
-  gap: 5vw;
-  
-}
-footer > img {
-  background-color: #fff;
-  padding: 10px;
-}
-footer > ul {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-}
-
-footer > ul > li{
-  color: #fff;
-  
-}
-footer > ul > li > .navLink{
-  color: #fff;
-  font-size: clamp(12px, 1vw, 16px);
-  
-}
-
-
 
 .hamburger{
   display:none;
@@ -74,15 +13,11 @@ footer > ul > li > .navLink{
   opacity: 0.65;
   transition: 0.35s;
 }
-#menu{
-   display:none;
-}
+
 
 nav {
   background-color: #fff;
   display: flex;
-  position: relative;
-  top: 0px;
   padding-inline: 5vw;
   padding-block: 1vw;
   flex-wrap: nowrap;
@@ -92,10 +27,10 @@ nav {
   align-content: center;
 }
 #logo {
-  scale: 1.5;
+  width: clamp(150px, 25vw, 300px);
 }
 .basket {
-  scale: .85;
+  width: clamp(40px, 3vw, 50px);
   cursor: pointer;
 }
 
@@ -105,19 +40,19 @@ nav {
 }
 #menu {
   display:flex;
-  width: 75%;
+  flex:1;
   list-style: none;
-  align-items: center;
   justify-content: space-evenly;
-  padding: 0;
+  padding: 0px;
+  gap: 1px;
+  align-items: center;
+  padding-left: 2%;
 }
 
 .navLink{
   font-family: 'IBM';
   font-weight: 700;
   font-size: clamp(12px, 1.5vw, 22px);
-  padding: 0;
-  text-align: center;
   color: #495E57;
   text-decoration-line: none;
 }
@@ -333,11 +268,12 @@ section h2 {
   width: 25vw;
   align-items: center;
   padding: 1%;
-  padding-top: 3%;
+  gap: 1vw;
 }
-.testimonials-card > div{
+.reviewer{
   display: flex;
-  align-items: center;
+  align-content: center;
+  gap: 2vw;
   justify-content: space-evenly;
   font-family: 'Karla';
   font-weight: 600;
@@ -347,6 +283,23 @@ section h2 {
   font-family: 'Karla';
   font-weight: 500;
   font-size: clamp(12px, 1.5vw, 24px);
+}
+
+.avatar{
+  border-radius: 50%;
+  height: 7.5vw;
+  width: 7.5vw;
+  object-fit: cover;
+}
+
+.stars {
+  display: flex;
+  padding: 2vw;
+  justify-content: space-evenly;
+}
+.stars > img {
+  width: 15%;
+  width: clamp(15px, 15%, 32px);
 }
 
 #about{
@@ -372,7 +325,7 @@ section h2 {
 }
 #about > div > .img:first-child{
   grid-area: overlap;
-  width:  55%;
+  width:  65%;
   height: 65%;
   background-color: #F4CE14;
   background-image: url("assets/images/restaurant.jpg");
@@ -383,65 +336,62 @@ section h2 {
 }
 #about > div > .img:nth-child(2){
   grid-area: overlap;
-  width: 75%;
-  height: 75%;
+  width: 65%;
+  height: 65%;
   background-color: #495E57;
   background-image: url("assets/images/restaurant chef.jpg");
   background-size: cover;
   background-position-y: center;
   background-position-x: center;
   justify-self: flex-end;
-  align-self: center;
-  transform: translate(5vw, -5vw); /* Move the second image down and right */
-
-
-
+  align-self: flex-start;
 }
 #about h2{
   color: black
 }
-.avatar {
-  width: 40%;
-  mask-image: radial-gradient(circle at center, black 50%, transparent 50%);
-  -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 50%); /* For wider browser support */
 
 
-}
-.stars {
+@media screen and (max-width: 700px) {
+#menuContainer {
   display: flex;
-  justify-content: space-evenly;
-}
-.stars > img {
-  width: 15%;
-  width: clamp(15px, 15%, 32px);
-}
-
-@media screen and (max-width: 960px) {
-#menu{
-  display:block;
-  position: fixed;
+  flex-direction: column;
   top: 0;
+  align-items: flex-start;
+  justify-items: flex-end;
+}
+#menu{
+  
+  display:flex;
+  position: fixed;
+  justify-content: start;
+  top: 0;
+  height: 95%;
+  width: 25%;
+  flex-direction: column;
   margin-top: 0px;
   background-color: #fff;
-  width: 33%;
-  font-size: 1rem;
   font-family: 'IBM';
   font-weight: 400;
   padding-inline: 5%;
-  padding-block: 2%;
-  height: 98vh;
+  padding-block: 5%;
   transition: 300ms ease;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
+  gap: 4%;
+}
+
+.menu-open {
+  left: 0;
 }
 .menu-closed {
-  left: -75vw;
+  left: -150vw;
 
 }
 #menu > li{
   text-align: left;
-  font-size: clamp(18px, 4vw, 24px);
-  padding-block: 7px;
+  display: flex;
+  width: 100%;
+
 }
 
 .hamburger {
@@ -453,20 +403,19 @@ section h2 {
 
 
 #menu > .hamburger {
-  display: block;
+  align-self: flex-start;
   width: 15%;
-  padding-right: 5%;
-  padding-top: 5%;
-  padding-bottom: 10%;
 }
 
 .navLink {
+  flex: 1;
+  align-self: center;
   color: #495E57;
+  text-align: left;
+  font-size: clamp(14px, 2.5vw, 24px);
+
 }
 
-.menu-open {
-  left: 0;
-}
 
 nav #logo {
   scale: 1;
@@ -476,21 +425,23 @@ nav #logo {
 }
 .footerLogo {
   display: block;
-  width: 15%;
-  background-color: #fff;
-  padding: 10px;
-  position: fixed;
-  bottom: 25px;
+  width: 100px;
   justify-self: center;
 
 }
+
+.menuFooter {
+  flex: 1;
+  align-content: end;
+}
 .hideBg {
   display: none;
+  
   background-color: #282c34;
   opacity: 0;
   width: 100%;
   position: fixed;
-  height: 100%;
+  height: 150%;
   top: 0%;
   left: 0%;
 }
@@ -500,7 +451,7 @@ nav #logo {
   opacity: .4;
   width: 100%;
   position: fixed;
-  height: 100%;
+  height: 125%;
   top: 0%;
   left: 0%;
 }

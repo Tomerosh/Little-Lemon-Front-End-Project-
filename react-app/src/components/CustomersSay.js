@@ -30,7 +30,7 @@ export default function CustomersSay() {
           return (
             <div className="testimonials-card">
               <RatingStars num={customer.rating} />
-              <div>
+              <div className="reviewer">
                 <img className="avatar" src={customer.img} />
                 <p>{customer.name}</p>
               </div>
