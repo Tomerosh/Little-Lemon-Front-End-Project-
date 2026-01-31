@@ -3,6 +3,7 @@ main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  justify-content: center;
 }
 
 .hamburger{
@@ -350,17 +351,16 @@ section h2 {
   color: black
 }
 
-
-@media screen and (max-width: 700px) {
-#menuContainer {
-  display: flex;
-  flex-direction: column;
-  top: 0;
-  align-items: flex-start;
-  justify-items: flex-end;
+.stars > img {
+  width: 15%;
+  width: clamp(15px, 15%, 32px);
 }
+
+form {
+   display: grid;  gap: 20px; padding-inline: 25vw;
+}
+@media screen and (max-width: 700px) {
 #menu{
-  
   display:flex;
   position: fixed;
   justify-content: start;
